@@ -14,7 +14,7 @@ function Alphabet() {
     })
   }
   return(
-    <div className="container-fluid text-center">
+    <div className="container-fluid text-center" style={{height: '4em'}}>
       {renderAlphabet()}
     </div>
   )

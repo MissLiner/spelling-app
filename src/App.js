@@ -1,5 +1,5 @@
-import Alphabet from './Alphabet';
-import WordCard from './WordCard';
+import Alphabet from 'components';
+import WordCard from 'components';
 
 function App() {
   return (
@@ -8,7 +8,17 @@ function App() {
       <h1 className="display-1">spell this!</h1>
     </div>
       <Alphabet />
-      <WordCard />
+      <div className="row">
+      
+        <div className="col">
+        </div>
+        <div className="col">
+          <WordCard />
+        </div>        
+        <div className="col">
+        </div>
+      </div>
+      
     </div>
 
   )
