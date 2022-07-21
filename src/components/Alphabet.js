@@ -1,4 +1,5 @@
 import React from "react";
+import Draggable from "react-draggable";
 
 function Alphabet() {
   const alphaNums = Array.from(Array(26)).map((x, i) => i + 97);
@@ -7,9 +8,11 @@ function Alphabet() {
   const renderAlphabet = () => {
     return alphas.map(alpha => {
       return (
-        <button type="button" className="btn btn-primary">
-          {alpha}
-        </button>
+        <Draggable>
+          <button type="button" className="btn btn-primary">
+            {alpha}
+          </button>
+        </Draggable>
       )
     })
   }
