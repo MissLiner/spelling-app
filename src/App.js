@@ -1,11 +1,11 @@
-import Alphabet from 'components';
-import WordCard from 'components';
+import Alphabet from 'components/Alphabet';
+import WordCard from 'components/WordCard';
 
 function App() {
   return (
     <div className="container-fluid">
     <div className="container-fluid text-center bg-dark text-white">
-      <h1 className="display-1">spell this!</h1>
+      <h1 className="display-1">spell me :)</h1>
     </div>
       <Alphabet />
       <div className="row">

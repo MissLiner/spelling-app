@@ -1,16 +1,51 @@
-function WordCard() {
-  return(
-    <div className="card" style={{width: '36rem'}}>
-      <img src="..." className="card-img-top" alt="..."></img>
-      
+import card_data from "data/card_data";
+import { useState } from "react";
+import tileBG from "images/tile_bg.png";
 
-      
-      <div className="card-body">
-        <h3 className="card-title">spell me!</h3>
-        <p className="card-text">hint: CVC</p>
-        <div className="form-outline">
-         <input type="text" className="form-control"></input>
+
+function WordCard() {
+  const [card, setCard] = useState(card_data[0]);
+  const [view, setView] = useState(Array(card.lCount).fill("transparent"));
+
+  const changeCard = (x) => {
+    setCard(card_data[x]);
+  }
+  const changeView = (y) => {
+    setView(view[y] = "black");
+  }
+
+  const renderSpaces = () => {
+          return(
+            card.letters.map((letter, i) => {
+              return(
+                
+                <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
+                     onMouseEnter={changeView(i)}
+                     style={{ backgroundImage: `url(${tileBG})`,
+                              color: `${view[i]}`}}
+                 >{letter}
+                </div>
+              )
+            })
+          )
+  }
+  return(
+    <div className="card mr-auto mt-4" style={{width: '28rem'}}>
+      <div className="card-body container">
+        <div className="row w-70 justify-content-center">
+          {renderSpaces()}
         </div>
+        
+      </div>
+      <img src={card.pic} 
+           className="card-img-top" 
+           alt={'Picture of a ' + card.name}
+      ></img>
+      <div className="card-img-overlay d-flex align-items-end text-white">
+        <a className="card-link text-white" 
+           href={card.credit[1]}
+         >{card.credit[0]}
+        </a>
       </div>
     </div>
   )
