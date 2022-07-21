@@ -4,8 +4,8 @@ import tileBG from "images/tile_bg.png";
 
 
 function WordCard() {
-  const [card, setCard] = useState(card_data[0]);
-  const [open, setOpen] = useState([true, true, true]);
+  const [card, setCard] = useState(card_data[2]);
+  const [open, setOpen] = useState(Array(card_data[2].lCount).fill(true));
   
 
   const changeCard = (x) => {
@@ -22,7 +22,7 @@ function WordCard() {
             card.letters.map((letter, i) => {
               return(
                 <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
-                     onClick={open[i] ? closeTile : undefined}
+                     onDrop={open[i] ? closeTile : undefined}
                      style={{ backgroundImage: `url(${tileBG})`,
                               color: open[i] ? "transparent" : "black"}}
                      key={"letter" + i}
