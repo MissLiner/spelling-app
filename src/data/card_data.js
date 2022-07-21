@@ -3,7 +3,7 @@ import catPic from 'images/pexels-larissa-barbosa-1870376.jpg';
 
 const card_data = [
   { name: "CAT",
-    letters: ['C', 'A', 'T'],
+    letters: ['c', 'a', 't'],
     entry: [],
     lCount: 3,
     pic: catPic,

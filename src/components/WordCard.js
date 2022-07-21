@@ -6,23 +6,37 @@ import tileBG from "images/tile_bg.png";
 function WordCard() {
   const [card, setCard] = useState(card_data[0]);
   const [view, setView] = useState(Array(card.lCount).fill("transparent"));
+  const [open, setOpen] = useState([true, true, true]);
+  
 
   const changeCard = (x) => {
     setCard(card_data[x]);
   }
-  const changeView = (y) => {
-    setView(view[y] = "black");
+  const closeTile = (e) => {
+    let openState = [...open];
+    openState[e.target.dataset.value] = false;
+    setOpen(openState);
+    console.log("hi");
+  }
+  const changeView = (e, i) => {
+    let newView = [...view];
+    newView[i] = "black";
+    setView(newView);
+    console.log("hi");
   }
 
   const renderSpaces = () => {
-          return(
+   
+          return( 
             card.letters.map((letter, i) => {
               return(
-                
-                <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
-                     onMouseEnter={changeView(i)}
-                     style={{ backgroundImage: `url(${tileBG})`,
-                              color: `${view[i]}`}}
+                <div className="bg-image h1 col-1 text-center 
+                                    mx-2 my-2 px-0"
+                        onClick={open[i] ? closeTile : undefined}
+                        style={{ backgroundImage: `url(${tileBG})`,
+                                 color: open[i] ? "transparent" : "black"}}
+                        key={"letter" + i}
+                        data-value={i}
                  >{letter}
                 </div>
               )
@@ -41,7 +55,8 @@ function WordCard() {
            className="card-img-top" 
            alt={'Picture of a ' + card.name}
       ></img>
-      <div className="card-img-overlay d-flex align-items-end text-white">
+      <div className="card-img-overlay d-flex align-items-end text-white"
+            style={{top: "100px"}}>
         <a className="card-link text-white" 
            href={card.credit[1]}
          >{card.credit[0]}
