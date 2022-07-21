@@ -4,17 +4,25 @@ import tileBG from "images/tile_bg.png";
 
 
 function WordCard() {
-  const [card, setCard] = useState(card_data[2]);
-  const [open, setOpen] = useState(Array(card_data[2].lCount).fill(true));
+  const [card, setCard] = useState(card_data[0]);
+  const [open, setOpen] = useState(Array(card_data[0].lCount).fill(true));
   
 
   const changeCard = (x) => {
     setCard(card_data[x]);
   }
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  }
   const closeTile = (e) => {
-    let openState = [...open];
-    openState[e.target.dataset.value] = false;
-    setOpen(openState);
+    const tile = e.dataTransfer.getData("text");
+    const indx = e.target.dataset.value;
+    console.log(tile, indx);
+    if(tile === card.letters[indx]) {
+      let openState = [...open];
+      openState[indx] = false;
+      setOpen(openState);
+    }
   }
   const renderSpaces = () => {
    
@@ -22,6 +30,7 @@ function WordCard() {
             card.letters.map((letter, i) => {
               return(
                 <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
+                     onDragOver={handleDragOver}
                      onDrop={open[i] ? closeTile : undefined}
                      style={{ backgroundImage: `url(${tileBG})`,
                               color: open[i] ? "transparent" : "black"}}

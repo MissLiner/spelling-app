@@ -1,4 +1,4 @@
-import catPic from 'images/pexels-larissa-barbosa-1870376.jpg';
+import catPic from 'images/pexels-krysten-merriman-20787.jpg';
 import dogPic from 'images/pexels-kat-smith-551628.jpg';
 import wolfPic from 'images/pexels-steve-682361.jpg'
 
@@ -7,8 +7,8 @@ const card_data = [
     letters: ['c', 'a', 't'],
     lCount: 3,
     pic: catPic,
-    credit: [ "Photo by Larissa Barbosa from Pexels", 
-              "https://www.pexels.com/photo/close-up-photography-of-brown-and-white-kitten-1870376/"]
+    credit: [ "Photo by Krysten Merriman from Pexels", 
+              "pexels.com/photo/short-coated-gray-cat-20787/"]
   },
   { name: "dog",
   letters: ['d', 'o', 'g'],
