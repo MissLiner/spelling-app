@@ -5,7 +5,6 @@ import tileBG from "images/tile_bg.png";
 
 function WordCard() {
   const [card, setCard] = useState(card_data[0]);
-  const [view, setView] = useState(Array(card.lCount).fill("transparent"));
   const [open, setOpen] = useState([true, true, true]);
   
 
@@ -16,27 +15,18 @@ function WordCard() {
     let openState = [...open];
     openState[e.target.dataset.value] = false;
     setOpen(openState);
-    console.log("hi");
   }
-  const changeView = (e, i) => {
-    let newView = [...view];
-    newView[i] = "black";
-    setView(newView);
-    console.log("hi");
-  }
-
   const renderSpaces = () => {
    
           return( 
             card.letters.map((letter, i) => {
               return(
-                <div className="bg-image h1 col-1 text-center 
-                                    mx-2 my-2 px-0"
-                        onClick={open[i] ? closeTile : undefined}
-                        style={{ backgroundImage: `url(${tileBG})`,
-                                 color: open[i] ? "transparent" : "black"}}
-                        key={"letter" + i}
-                        data-value={i}
+                <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
+                     onClick={open[i] ? closeTile : undefined}
+                     style={{ backgroundImage: `url(${tileBG})`,
+                              color: open[i] ? "transparent" : "black"}}
+                     key={"letter" + i}
+                     data-value={i}
                  >{letter}
                 </div>
               )

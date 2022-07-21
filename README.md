@@ -1,4 +1,5 @@
 # Spell This!
+The challenge is to create the entire app using no custom css files at all. Can I do it?
 
 ## Conditional Styling & Event Listeners
 
@@ -9,3 +10,9 @@ until guessed, and wanted to remove the even listener once guessed.
 I used useState to set the "open" state of each tile with a boolean, and
 changed the color of the text and whether the event listener was
 attached to the tile dependent on the open state.
+-const [open, setOpen] = useState([true, true, true]);
+-  const closeTile = (e) => {
+    let openState = [...open];
+    openState[e.target.dataset.value] = false;
+    setOpen(openState);
+  }
