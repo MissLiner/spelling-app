@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import tileBG from "images/tile_bg.png";
 
-function WordCard({card}) {
-
+function WordCard({card, winFunc}) {
   const [open, setOpen] = useState(Array(card.lCount).fill(true));
+  const [count, setCount] = useState(0);
   
 
   const handleDragOver = (e) => {
@@ -12,29 +12,42 @@ function WordCard({card}) {
   const closeTile = (e) => {
     const tile = e.dataTransfer.getData("text");
     const indx = e.target.dataset.value;
-    console.log(tile, indx);
     if(tile === card.letters[indx]) {
       let openState = [...open];
       openState[indx] = false;
       setOpen(openState);
+      setCount(count+1);
     }
   }
+  useEffect(() => {
+    setOpen(Array(card.lCount).fill(true));
+  }, [card]);
+
+  useEffect(() => {
+    if(count === card.lCount) {
+      setTimeout(() => {
+        winFunc();
+        setCount(0);
+      }, 1000);
+    }
+  }, [count])
+
   const renderSpaces = () => {
-          return( 
-            card.letters.map((letter, i) => {
-              return(
-                <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
-                     onDragOver={handleDragOver}
-                     onDrop={open[i] ? closeTile : undefined}
-                     style={{ backgroundImage: `url(${tileBG})`,
-                              color: open[i] ? "transparent" : "black"}}
-                     key={"letter" + i}
-                     data-value={i}
-                 >{letter}
-                </div>
-              )
-            })
-          )
+    return( 
+      card.letters.map((letter, i) => {
+        return(
+          <div className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
+                onDragOver={handleDragOver}
+                onDrop={open[i] ? closeTile : undefined}
+                style={{ backgroundImage: `url(${tileBG})`,
+                        color: open[i] ? "transparent" : "black"}}
+                key={"letter" + i}
+                data-value={i}
+            >{letter}
+          </div>
+        )
+      })
+    )
   }
   return(
     <div className="card mr-auto mt-4" style={{width: '28rem'}}>

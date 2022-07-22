@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { card_data, start_card } from 'data/card_data';
-import { shuffleArr, say } from 'data/helpers';
+import { shuffleArr } from 'data/helpers';
 import Alphabet from 'components/Alphabet';
 import WordCard from 'components/WordCard';
+import Deck from 'components/Deck';
 
 function App() {
   const [deck, setDeck] = useState();
@@ -25,23 +26,28 @@ function App() {
     setDeck(cards);
   }
 
-  const addWin = (x) => {
+  const handleWin = (x) => {
     let won = [...winDeck];
     won.push(deck[x]);
     setWinDeck(won);
+    dealCard();
   }
   useEffect(() => {
     dealCard();
   }, [])
-  // useEffect(() => {
-    
-  // }, []);
+
+  const addDeck = () => {
+    if(deck) { 
+      return(
+        <Deck deck = {deck} />
+      )
+      } else { return null }
+  }
 
   return (
     <div className="container-fluid">
     <div className="container-fluid text-center bg-dark text-white">
       <h1 className="display-1">spell me :)</h1>
-      {/* <button type="button" onClick={handleStart}>start</button> */}
     </div>
       <Alphabet />
       <div className="row">
@@ -49,9 +55,10 @@ function App() {
         <div className="col">
         </div>
         <div className="col">
-          <WordCard card={card}/>
+          <WordCard card={card} winFunc={handleWin}/>
         </div>        
         <div className="col">
+          {addDeck()}
         </div>
       </div>
       

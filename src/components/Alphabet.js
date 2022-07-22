@@ -9,7 +9,7 @@ function Alphabet() {
   const renderAlphabet = () => {
     return alphas.map((alpha, i) => {
       return (
-        <Letter alpha={alpha} i={i} />
+        <Letter alpha={alpha} key={"alpha" + i}/>
       )
     })
   }

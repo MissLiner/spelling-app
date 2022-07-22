@@ -1,5 +1,5 @@
 const Letter = (props) => {
-  const { i, alpha } = props;
+  const { alpha } = props;
   const handleDrag = (e) => {
     e.dataTransfer.setData("text/plain", e.target.dataset.value);
   }
@@ -9,7 +9,6 @@ const Letter = (props) => {
       draggable="true"
       onDragStart={handleDrag}
       className="btn btn-primary" 
-      key={"alpha" + i}
       data-value={alpha}
      >{alpha}
     </button>
