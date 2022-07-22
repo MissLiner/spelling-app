@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { card_data, start_card } from 'data/card_data';
+import { card_data, start_card, win_card } from 'data/card_data';
 import { shuffleArr } from 'data/helpers';
 import Alphabet from 'components/Alphabet';
 import WordCard from 'components/WordCard';
@@ -9,6 +9,7 @@ function App() {
   const [deck, setDeck] = useState();
   const [winDeck, setWinDeck] = useState([]);
   const [card, setCard] = useState(start_card);
+  const [winCount, setWinCount] = useState(0);
 
   (function shuffle() {
     if(!deck) {
@@ -19,18 +20,25 @@ function App() {
   })()
 
   const dealCard = () => {
-    let cards = [...deck];
-    let indx = cards.splice(0, 1);
-
-    setCard(card_data[indx]);
-    setDeck(cards);
+    setWinCount(winCount + 1);
+    if(winCount === card_data.length) {
+      setCard(win_card);
+    } else {
+      let cards = [...deck];
+      let indx = cards.splice(0, 1);
+  
+      setCard(card_data[indx]);
+      setDeck(cards);
+    }
   }
 
   const handleWin = () => {
     let won = [...winDeck];
     won.push(card_data.indexOf(card));
     setWinDeck(won);
+    
     dealCard();
+    
   }
   useEffect(() => {
     dealCard();

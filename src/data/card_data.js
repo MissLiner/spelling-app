@@ -2,6 +2,7 @@ import catPic from 'images/pexels-krysten-merriman-20787.jpg';
 import dogPic from 'images/pexels-kat-smith-551628.jpg';
 import wolfPic from 'images/pexels-steve-682361.jpg';
 import loadPic from 'images/loading.png';
+import winPic from 'images/win.png';
 
 const card_data = [
   { name: "cat",
@@ -27,11 +28,19 @@ credit: [ "Photo by Steve from Pexels",
 }
 ]
 const start_card = {
-name: "word",
-letters: ['w', 'o', 'r', 'd'],
+name: "start",
+letters: [""],
 lCount: 4,
 pic: loadPic,
 credit: [ "", 
           ""]
 }
-export {card_data, start_card};
+const win_card = {
+  name: "won",
+  letters: [""],
+  lCount: 4,
+  pic: winPic,
+  credit: [ "", 
+            ""]
+  }
+export {card_data, start_card, win_card};
