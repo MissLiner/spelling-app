@@ -61,7 +61,7 @@ function App() {
           <WordCard card={card} winFunc={handleWin}/>
         </div>        
         <div className="col">
-          <Deck deck={deck} pics={[questionMarkPic]} />
+          <Deck deck={deck} pic={questionMarkPic} />
         </div>
       </div>
       

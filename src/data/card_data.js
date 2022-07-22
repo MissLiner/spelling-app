@@ -17,30 +17,30 @@ const card_data = [
   lCount: 3,
   pic: dogPic,
   credit: [ "Photo by Kat Smith from Pexels", 
-            "https://www.pexels.com/photo/shallow-focus-photography-of-adult-black-and-white-border-collie-551628/"]
-},
-{ name: "wolf",
-letters: ['w', 'o', 'l', 'f'],
-lCount: 4,
-pic: wolfPic,
-credit: [ "Photo by Steve from Pexels", 
-          "https://www.pexels.com/collections/spell-animals-7xnhrmk/"]
-}
-]
-const start_card = {
-name: "start",
-letters: [""],
-lCount: 4,
-pic: loadPic,
-credit: [ "", 
-          ""]
-}
-const win_card = {
-  name: "won",
-  letters: [""],
+              "https://www.pexels.com/photo/shallow-focus-photography-of-adult-black-and-white-border-collie-551628/"]
+  },
+  { name: "wolf",
+  letters: ['w', 'o', 'l', 'f'],
   lCount: 4,
-  pic: winPic,
-  credit: [ "", 
-            ""]
+  pic: wolfPic,
+  credit: [ "Photo by Steve from Pexels", 
+            "https://www.pexels.com/collections/spell-animals-7xnhrmk/"]
+  }
+  ]
+  const start_card = {
+    name: "start",
+    letters: [""],
+    lCount: 4,
+    pic: loadPic,
+    credit: [ "", 
+              ""]
+  }
+  const win_card = {
+    name: "won",
+    letters: [""],
+    lCount: 4,
+    pic: winPic,
+    credit: [ "", 
+              ""]
   }
 export {card_data, start_card, win_card};

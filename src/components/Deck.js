@@ -1,19 +1,16 @@
 import { card_data } from "data/card_data";
 
-function Deck({deck, pics}) {
-  pics = pics[1] ? pics.map(pic => 
-    {return pic.pic}) : 
-    pics = Array(deck.length).fill(pics[0]);
-
+function Deck({deck, pics, pic}) {
   const renderDeck = () => {
+    if(pics) {console.log(pics[deck[0]])};
     if(deck) {
       return(
         deck.map((indx, i) => {
           const card = card_data[indx];
           return(
-            <img className="img-thumbnail w-50"
+            <img className="img-thumbnail col-lg-4 col-md-6"
                  key={card.name + "deck"} 
-                 src={pics[deck[i]]} 
+                 src={pics ? pics[deck[i]].pic : pic} 
                  alt="word card">
             </img>
           )
@@ -22,7 +19,7 @@ function Deck({deck, pics}) {
     } else { return null };
   }
   return(
-    <div className="col">
+    <div className="row">
       {renderDeck()}
     </div>
   )
