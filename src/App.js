@@ -26,9 +26,9 @@ function App() {
     setDeck(cards);
   }
 
-  const handleWin = (x) => {
+  const handleWin = () => {
     let won = [...winDeck];
-    won.push(deck[x]);
+    won.push(card_data.indexOf(card));
     setWinDeck(won);
     dealCard();
   }
@@ -36,10 +36,10 @@ function App() {
     dealCard();
   }, [])
 
-  const addDeck = () => {
-    if(deck) { 
+  const addDeck = (deckArr) => {
+    if(deckArr) { 
       return(
-        <Deck deck = {deck} />
+        <Deck deck = {deckArr} />
       )
       } else { return null }
   }
@@ -53,12 +53,13 @@ function App() {
       <div className="row">
       
         <div className="col">
+        {addDeck(winDeck)}
         </div>
         <div className="col">
           <WordCard card={card} winFunc={handleWin}/>
         </div>        
         <div className="col">
-          {addDeck()}
+          {addDeck(deck)}
         </div>
       </div>
       
