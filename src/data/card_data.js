@@ -1,6 +1,7 @@
 import catPic from 'images/pexels-krysten-merriman-20787.jpg';
 import dogPic from 'images/pexels-kat-smith-551628.jpg';
-import wolfPic from 'images/pexels-steve-682361.jpg'
+import wolfPic from 'images/pexels-steve-682361.jpg';
+import loadPic from 'images/loading.png';
 
 const card_data = [
   { name: "cat",
@@ -25,4 +26,12 @@ credit: [ "Photo by Steve from Pexels",
           "https://www.pexels.com/collections/spell-animals-7xnhrmk/"]
 }
 ]
-export default card_data;
+const start_card = {
+name: "word",
+letters: ['w', 'o', 'r', 'd'],
+lCount: 4,
+pic: loadPic,
+credit: [ "", 
+          ""]
+}
+export {card_data, start_card};

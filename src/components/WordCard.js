@@ -1,16 +1,11 @@
-import card_data from "data/card_data";
 import { useState } from "react";
 import tileBG from "images/tile_bg.png";
 
+function WordCard({card}) {
 
-function WordCard() {
-  const [card, setCard] = useState(card_data[0]);
-  const [open, setOpen] = useState(Array(card_data[0].lCount).fill(true));
+  const [open, setOpen] = useState(Array(card.lCount).fill(true));
   
 
-  const changeCard = (x) => {
-    setCard(card_data[x]);
-  }
   const handleDragOver = (e) => {
     e.preventDefault();
   }
@@ -25,7 +20,6 @@ function WordCard() {
     }
   }
   const renderSpaces = () => {
-   
           return( 
             card.letters.map((letter, i) => {
               return(
