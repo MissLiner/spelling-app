@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { card_data, start_card, win_card } from 'data/card_data';
 import { shuffleArr } from 'data/helpers';
+import questionMarkPic from 'images/question_mark.png';
 import Alphabet from 'components/Alphabet';
 import WordCard from 'components/WordCard';
 import Deck from 'components/Deck';
@@ -44,13 +45,7 @@ function App() {
     dealCard();
   }, [])
 
-  const addDeck = (deckArr) => {
-    if(deckArr) { 
-      return(
-        <Deck deck = {deckArr} />
-      )
-      } else { return null }
-  }
+
 
   return (
     <div className="container-fluid">
@@ -59,15 +54,14 @@ function App() {
     </div>
       <Alphabet />
       <div className="row">
-      
         <div className="col">
-        {addDeck(winDeck)}
+          <Deck deck={winDeck} pics={card_data} />
         </div>
         <div className="col">
           <WordCard card={card} winFunc={handleWin}/>
         </div>        
         <div className="col">
-          {addDeck(deck)}
+          <Deck deck={deck} pics={[questionMarkPic]} />
         </div>
       </div>
       
