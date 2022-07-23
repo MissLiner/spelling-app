@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import tileBG from "images/tile_bg.png";
+import { card_data,start_card, win_card } from "data/card_data";
 
 function WordCard({card, winFunc}) {
+  // STATE
   const [open, setOpen] = useState(Array(card.lCount).fill(true));
   const [count, setCount] = useState(0);
-  
 
+  // DRAG HANDLERS
   const handleDragOver = (e) => {
     e.preventDefault();
   }
@@ -19,6 +21,7 @@ function WordCard({card, winFunc}) {
       setCount(count+1);
     }
   }
+  // TILE CONTROLLERS
   useEffect(() => {
     setOpen(Array(card.lCount).fill(true));
   }, [card]);

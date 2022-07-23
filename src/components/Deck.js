@@ -1,21 +1,17 @@
-import { card_data } from "data/card_data";
+import questionMarkPic from 'images/question_mark.png';
 
-function Deck({deck, pics, pic}) {
+function Deck({length}) {
   const renderDeck = () => {
-    if(pics) {console.log(pics[deck[0]])};
-    if(deck) {
-      return(
-        deck.map((indx, i) => {
-          const card = card_data[indx];
-          return(
-            <img className="img-thumbnail col-lg-4 col-md-6"
-                 key={card.name + "deck"} 
-                 src={pics ? pics[deck[i]].pic : pic} 
-                 alt="word card">
-            </img>
-          )
-        })
-      )
+    if(length) {
+      for(let i = 0; i < length; i++) {
+        return(
+          <img className="img-thumbnail col-lg-4 col-md-6"
+          key={"deck" + i} 
+          src={questionMarkPic} 
+          alt="word card">
+     </img>
+        )
+      }
     } else { return null };
   }
   return(
