@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import tileBG from "images/tile_bg.png";
-import { card_data,start_card, win_card } from "data/card_data";
 
 function WordCard({card, winFunc}) {
   // STATE
