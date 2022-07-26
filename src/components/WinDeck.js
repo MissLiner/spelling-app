@@ -8,7 +8,7 @@ function WinDeck({arr}) {
         const card = card_data[indx];
         return(
           <img 
-            className="img-thumbnail col-lg-4 col-md-6"
+            className="img-thumbnail col-lg-4 col-md-6 border-0 px-1"
             key={card.name + "deck"} 
             src={card.pic} 
             alt="word card">
@@ -18,7 +18,7 @@ function WinDeck({arr}) {
     )
   }
   return(
-    <div className="row">
+    <div className="row mt-5 mx-2">
       {renderDeck()}
     </div>
   )

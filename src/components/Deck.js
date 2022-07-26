@@ -8,7 +8,7 @@ function Deck({arr}) {
         if(i === 0) {return null}
         return(
           <img 
-            className="img-thumbnail col-lg-4 col-md-6"
+            className="img-thumbnail col-lg-4 col-md-6 border-0"
             key={"deck" + i} 
             src={questionMarkPic} 
             alt="word card">
@@ -18,7 +18,7 @@ function Deck({arr}) {
     ) 
   }
   return(
-    <div className="row">
+    <div className="row mt-5 mx-5">
       {renderDeck()}
     </div>
   )

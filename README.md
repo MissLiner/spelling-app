@@ -16,6 +16,9 @@ attached to the tile dependent on the open state.
     openState[e.target.dataset.value] = false;
     setOpen(openState);
   }
+## Rainbow Letters
+
+Assigned custom palette colors use remainder of i from mapping letters to ccle through the colors.
 
 ## Credits
 <a href="https://www.flaticon.com/free-icons/hear" title="hear icons">Hear icons created by msidiqf - Flaticon</a>
