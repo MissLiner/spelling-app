@@ -16,3 +16,6 @@ attached to the tile dependent on the open state.
     openState[e.target.dataset.value] = false;
     setOpen(openState);
   }
+
+## Credits
+<a href="https://www.flaticon.com/free-icons/hear" title="hear icons">Hear icons created by msidiqf - Flaticon</a>

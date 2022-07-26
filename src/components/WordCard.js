@@ -69,7 +69,7 @@ function WordCard({card, winFunc}) {
               </div>
             </div>
             <div
-            className="col-1 end-0 position-absolute">
+            className="col-2 h-100 end-0 position-absolute">
               <ReadButton word={card.name} />
             </div>
           </div>
