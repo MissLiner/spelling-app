@@ -2,8 +2,10 @@ import catPic from 'images/pexels-krysten-merriman-20787.jpg';
 import dogPic from 'images/pexels-kat-smith-551628.jpg';
 import wolfPic from 'images/pexels-steve-682361.jpg';
 import mousePic from 'images/pexels-pixabay-301448.jpg';
-import pigPic from 'images/pexels-mali-maeder-110820.jpg';
-import frogPic from 'images/pexels-thierry-fillieul-1046494.jpg'
+import pigPic from 'images/pexels-julia-clooten-9249120.jpg';
+import frogPic from 'images/pexels-thierry-fillieul-1046494.jpg';
+import deerPic from 'images/pexels-patrice-schoefolt-8527520.jpg';
+import foxPic from 'images/pexels-erik-mclean-4157091.jpg'
 import loadPic from 'images/loading.png';
 import winPic from 'images/win.png';
 
@@ -50,7 +52,20 @@ const card_data = [
   credit: [ "Photo by Thierry Fillieul from Pexels", 
             "https://www.pexels.com/photo/closeup-photo-of-blue-frog-on-green-surface-1046494/"]
   },
-  ]
+  { name: "deer",
+  letters: ['d', 'e', 'e', 'r'],
+  lCount: 4,
+  pic: deerPic,
+  credit: [ "Photo by patrice schoefolt from Pexels", 
+            "https://www.pexels.com/photo/a-deer-lying-on-a-grassy-field-8527520/"]
+  },
+  { name: "fox",
+  letters: ['f', 'o', 'x'],
+  lCount: 3,
+  pic: foxPic,
+  credit: [ "Photo by Erik Mclean", 
+            "https://www.pexels.com/photo/fluffy-fox-walking-on-asphalt-road-4157091/"]
+  },]
   const start_card = {
     name: "start",
     letters: [""],
