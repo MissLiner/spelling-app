@@ -68,7 +68,7 @@ const card_data = [
   },]
   const start_card = {
     name: "start",
-    letters: [""],
+    letters: [],
     lCount: 4,
     pic: loadPic,
     credit: [ "", 
@@ -76,7 +76,7 @@ const card_data = [
   }
   const win_card = {
     name: "won",
-    letters: [""],
+    letters: [],
     lCount: 4,
     pic: winPic,
     credit: [ "", 

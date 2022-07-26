@@ -22,7 +22,7 @@ const ReadButton = ({word}) => {
       className="btn h-100 w-100 p-0" 
       onClick={readWord}>
       <img 
-        className="image h-100" 
+        className="image h-75" 
         src={hearIcon} 
         alt="hear word" />
     </button>

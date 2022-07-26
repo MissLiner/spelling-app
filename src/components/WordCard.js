@@ -39,12 +39,12 @@ function WordCard({card, winFunc}) {
       card.letters.map((letter, i) => {
         return(
           <div 
-            className="bg-image h1 col-1 text-center mx-2 my-2 px-0"
+            className="display-4 col-2 text-center mx-1 my-1 px-0 border border-4 border-top-0 border-start-0 border-end-0 border-success"
             onDragOver={handleDragOver}
             onDrop={open[i] ? closeTile : undefined}
             style={{ 
               backgroundImage: `url(${tileBG})`,
-              color: open[i] ? "transparent" : "black"}}
+              color: open[i] ? "transparent" : "green "}}
             key={"letter" + i}
             data-value={i}
             >{letter}
@@ -56,20 +56,17 @@ function WordCard({card, winFunc}) {
   return(
     <div 
       className="card mr-auto mt-4" 
-      style={{width: '28rem'}}>
+      style={{width: '26rem'}}>
       <div 
         className="card-body container">
           <div className="row position-relative">
-            <div 
-            // className="col w-70 justify-content-center"
-            className="col-12 justify-content-center"
-             >
-              <div className="row justify-content-center">
+            <div className="col-12 justify-content-center">
+              <div className="row w-75 justify-content-center mx-auto">
                 {renderSpaces()}
               </div>
             </div>
             <div
-            className="col-2 h-100 end-0 position-absolute">
+            className="col-2 h-100 end-0 position-absolute ">
               <ReadButton word={card.name} />
             </div>
           </div>
@@ -83,8 +80,8 @@ function WordCard({card, winFunc}) {
       </img>
 
       <div 
-        className="card-img-overlay d-flex align-items-end text-white"
-        style={{top: "100px"}}>
+        className="card-img-overlay d-flex align-items-end"
+        style={{top: "10rem"}}>
         <a 
           className="card-link text-white" 
           href={card.credit[1]}
