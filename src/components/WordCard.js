@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import tileBG from "images/tile_bg.png";
+import ReadButton from "./ReadButton";
 
 function WordCard({card, winFunc}) {
   const [open, setOpen] = useState(Array(card.lCount).fill(true));
@@ -58,10 +59,21 @@ function WordCard({card, winFunc}) {
       style={{width: '28rem'}}>
       <div 
         className="card-body container">
-        <div 
-          className="row w-70 justify-content-center"
-          >{renderSpaces()}
-        </div>
+          <div className="row position-relative">
+            <div 
+            // className="col w-70 justify-content-center"
+            className="col-12 justify-content-center"
+             >
+              <div className="row justify-content-center">
+                {renderSpaces()}
+              </div>
+            </div>
+            <div
+            className="col-1 end-0 position-absolute">
+              <ReadButton word={card.name} />
+            </div>
+          </div>
+
       </div>
 
       <img 
