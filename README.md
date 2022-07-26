@@ -19,3 +19,7 @@ attached to the tile dependent on the open state.
 
 ## Credits
 <a href="https://www.flaticon.com/free-icons/hear" title="hear icons">Hear icons created by msidiqf - Flaticon</a>
+
+voices - 20, 25, 26, 33, 49 (51 - british man), 64
+
+english - 0, 10, 11 (17 female australia) (28 - irish? IE), 33!, 37(ZA), 41!
