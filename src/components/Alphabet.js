@@ -6,10 +6,12 @@ function Alphabet() {
   const alphaNums = Array.from(Array(26)).map((x, i) => i + 97);
   const alphas = alphaNums.map(x => String.fromCharCode(x));
 
+
+
   const renderAlphabet = () => {
     return alphas.map((alpha, i) => {
       return (
-        <Letter alpha={alpha} key={"alpha" + i}/>
+        <Letter alpha={alpha} key={"alpha" + i} i={i} />
       )
     })
   }

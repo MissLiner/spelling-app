@@ -5,9 +5,6 @@ import { detectBrowser } from "data/helpers";
 const ReadButton = ({word}) => {
   const { speak, voices } = useSpeechSynthesis();
   const readWord = () => { 
-    // voices.forEach((voice, i) => {
-    //   console.table(i, voice);
-    // })
     let voiceChoice;
     const browser = detectBrowser();
     switch(browser) {
