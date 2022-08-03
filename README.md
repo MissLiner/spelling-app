@@ -26,6 +26,7 @@ Assigned custom palette colors use remainder of i from mapping letters to ccle t
 -Hints
 -Multiple deck options
 -Difficulty levels
+-Animations
 
 ## Credits
 <a href="https://www.flaticon.com/free-icons/hear" title="hear icons">Hear icons created by msidiqf - Flaticon</a>
