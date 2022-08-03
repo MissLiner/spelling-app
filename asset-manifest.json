@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/spelling-app/static/css/main.5e8e8813.css",
+    "main.js": "/spelling-app/static/js/main.f1eedf3c.js",
+    "static/media/pexels-kat-smith-551628.jpg": "/spelling-app/static/media/pexels-kat-smith-551628.8cca757aa3ba0cd816e1.jpg",
+    "static/media/pexels-patrice-schoefolt-8527520.jpg": "/spelling-app/static/media/pexels-patrice-schoefolt-8527520.69ca1c7f475d10cecee6.jpg",
+    "static/media/pexels-julia-clooten-9249120.jpg": "/spelling-app/static/media/pexels-julia-clooten-9249120.2c394781707cc28ae3b2.jpg",
+    "static/media/pexels-erik-mclean-4157091.jpg": "/spelling-app/static/media/pexels-erik-mclean-4157091.4ab791d0a7e5c5625037.jpg",
+    "static/media/pexels-steve-682361.jpg": "/spelling-app/static/media/pexels-steve-682361.a8ccb1bd2bd13003b944.jpg",
+    "static/media/pexels-pixabay-301448.jpg": "/spelling-app/static/media/pexels-pixabay-301448.8fab1ce584f31dbd47c0.jpg",
+    "static/media/pexels-thierry-fillieul-1046494.jpg": "/spelling-app/static/media/pexels-thierry-fillieul-1046494.ac1bdb0e192faa478240.jpg",
+    "static/media/pexels-krysten-merriman-20787.jpg": "/spelling-app/static/media/pexels-krysten-merriman-20787.65cdac8d4185e8349586.jpg",
+    "static/media/win.png": "/spelling-app/static/media/win.ca720891ca66f47b78b2.png",
+    "static/media/question_mark.png": "/spelling-app/static/media/question_mark.5d843dff1034ad578cba.png",
+    "static/media/loading.png": "/spelling-app/static/media/loading.20e729b6b8ba9a4d6fc0.png",
+    "index.html": "/spelling-app/index.html",
+    "main.5e8e8813.css.map": "/spelling-app/static/css/main.5e8e8813.css.map",
+    "main.f1eedf3c.js.map": "/spelling-app/static/js/main.f1eedf3c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e8e8813.css",
+    "static/js/main.f1eedf3c.js"
+  ]
+}
