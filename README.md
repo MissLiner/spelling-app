@@ -20,6 +20,13 @@ attached to the tile dependent on the open state.
 
 Assigned custom palette colors use remainder of i from mapping letters to ccle through the colors.
 
+## Future Updates
+-Use APIs to call photos from Pexels
+-Read word out loud when speeled correctly
+-Hints
+-Multiple deck options
+-Difficulty levels
+
 ## Credits
 <a href="https://www.flaticon.com/free-icons/hear" title="hear icons">Hear icons created by msidiqf - Flaticon</a>
 

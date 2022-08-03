@@ -1,6 +1,7 @@
 {
   "name": "spelling-app",
   "version": "0.1.0",
+  "homepage": "https://missliner.github.io/spelling-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -17,6 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "bootstrap-icons": "^1.9.1",
+    "gh-pages": "^4.0.0",
     "pexels": "^1.3.0",
     "react-draggable": "^4.4.5"
   }
