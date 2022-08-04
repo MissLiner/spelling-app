@@ -30,41 +30,38 @@ const closeTile = (e) => {
 
 I added draggable functionality to each letter, which I had to learn for this project. It was surprisingly easy! To add drag-ability to your own React project:
 
-- In component/element you want to drag:
-  1. In drag element - create a handleDrag() function, which stores the data from your drag element when you start dragging (I added 'data-value={alpha} to each letter and referred to that):
-``` 
-const handleDrag = (e) => {
-  e.dataTransfer.setData("text/plain", e.target.dataset.value);
-}
-```
-  2. In drag element - Add the following properties to your drag element:
-```
-draggable="true"
-onDragStart={handleDrag}
-```
-  3. In drag-to element - (in this case the empty letter tiles on my WordCard), add a handleDragOver() function to prevent default behavior:
-``` 
-const handleDragOver = (e) => {
-  e.preventDefault();
-}
-```
-  4. In drag-to element - create a handleDrop() function (I used a ternary operator in the property itself that changed state).
+- In drag element:
+  1. Create a handleDrag() function, which stores the data from your drag element when you start dragging (I added 'data-value={alpha} to each letter and referred to that):
+        const handleDrag = (e) => {
+            e.dataTransfer.setData("text/plain", e.target.dataset.value);
+        }
 
-  5. In drag-to element - add the following properties:
-```
-onDragOver={handleDragOver}
-onDrop={handleDrop}
-```
+  2. Add the following properties:
+        draggable="true"
+        onDragStart={handleDrag}
+
+- In drag-to element: *(in this case the empty letter tiles on my WordCard)*
+  1. Add a  handleDragOver() function to prevent default behavior:
+        const handleDragOver = (e) => {
+            e.preventDefault();
+        }
+
+  2. Create a handleDrop() function (I used a ternary operator in the property itself that changed state).
+
+  3. In drag-to element - add the following properties:
+        onDragOver={handleDragOver}
+        onDrop={handleDrop}
+
     *As mentioned, I used a ternary here, so my onDrop looks like this:*
-```
-onDrop={open[i] ? closeTile : undefined}
-```
+        onDrop={open[i] ? closeTile : undefined}
+
 
 ### Rainbow Letters
 
 The Alphabet component maps each letter and returns it while passing 'i' as a prop to the Letter component. The Letter component then assigns a color (from a custom palette I created in Adobe Color) to each letter, based on the remainder of 'i'. The colors are defined in custom.scss.
 
-```const assignColor = () => {
+```
+  const assignColor = () => {
     let color;
     switch(i%5) {
       case 0: 
@@ -87,7 +84,8 @@ The Alphabet component maps each letter and returns it while passing 'i' as a pr
         break;
     } 
     return color;
-  }```
+  }
+```
 
 
 ## Future Updates
