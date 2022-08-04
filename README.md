@@ -12,7 +12,7 @@ until guessed, and wanted to remove the event listener once guessed.
 
 useState sets the "open" state of each tile with a boolean, and
 changes the color of the text, and whether the event listener is
-attached to the tile.
+attached to the tile (*see the Draggable section below*). 
 
 ``` 
 const [open, setOpen] = useState(Array(card.lCount).fill(true));
