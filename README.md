@@ -4,6 +4,15 @@ The challenge is to create the entire app using Bootstrap, and no custom css fil
 
 *Update:* I did it, but decided to add one SCSS file, to learn more about customizing Bootstrap.
 
+## Table of Contents
+
+1. [Conditional Styling & Event Listeners] (https://github.com/MissLiner/spelling-app#conditional-styling--event-listeners)
+2. [Alphabet Features](https://github.com/MissLiner/spelling-app#alphabet-features)
+  1. [Draggable](https://github.com/MissLiner/spelling-app#draggable)
+  2. [Rainbow Letters](https://github.com/MissLiner/spelling-app#rainbow-letters)
+3. [Future Updates](https://github.com/MissLiner/spelling-app#future-updates)
+4. [Credits](https://github.com/MissLiner/spelling-app#credits)
+
 ## Conditional Styling & Event Listeners
 
 I implemented the ternary operator and useState to add conditional styling and 
@@ -56,7 +65,7 @@ I added draggable functionality to each letter, which I had to learn for this pr
             onDragOver={handleDragOver}
             onDrop={handleDrop}
 
-    *As mentioned, I used a ternary here, so my onDrop looks like this:*
+  *As mentioned, I used a ternary here, so my onDrop looks like this:*
 
         onDrop={open[i] ? closeTile : undefined}
 
@@ -94,12 +103,13 @@ The Alphabet component maps each letter and returns it while passing 'i' as a pr
 
 
 ## Future Updates
--Use APIs to call photos from Pexels
--Read word out loud when speeled correctly
--Hints
--Multiple deck options
--Difficulty levels
--Animations
+
+- Use APIs to call photos from Pexels
+- Read word out loud when speeled correctly
+- Hints
+- Multiple deck options
+- Difficulty levels
+- Animations
 
 ## Credits
-<a href="https://www.flaticon.com/free-icons/hear" title="hear icons">Hear icons created by msidiqf - Flaticon</a>
+Hear icons created by <a href="https://www.flaticon.com/free-icons/hear" title="hear icons">msidiqf - Flaticon</a>
