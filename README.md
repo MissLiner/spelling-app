@@ -30,7 +30,7 @@ const closeTile = (e) => {
 
 I added draggable functionality to each letter, which I had to learn for this project. It was surprisingly easy! To add drag-ability to your own React project:
 
-- In drag element:
+**In drag element:**
   1. Create a handleDrag() function, which stores the data from your drag element when you start dragging (I added 'data-value={alpha} to each letter and referred to that):
 
             const handleDrag = (e) => {
@@ -42,7 +42,7 @@ I added draggable functionality to each letter, which I had to learn for this pr
             draggable="true"
             onDragStart={handleDrag}
 
-- In drag-to element: *(in this case the empty letter tiles on my WordCard)*
+**In drag-to element:** *(in this case the empty letter tiles on my WordCard)*
   1. Add a  handleDragOver() function to prevent default behavior:
 
             const handleDragOver = (e) => {
