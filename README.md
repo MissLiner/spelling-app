@@ -6,7 +6,7 @@ The challenge is to create the entire app using Bootstrap, and no custom css fil
 
 ## Table of Contents
 
-1. [Conditional Styling & Event Listeners] (https://github.com/MissLiner/spelling-app#conditional-styling--event-listeners)
+1. [Conditional Styling & Event Listeners](https://github.com/MissLiner/spelling-app#conditional-styling--event-listeners)
 2. [Alphabet Features](https://github.com/MissLiner/spelling-app#alphabet-features)
   1. [Draggable](https://github.com/MissLiner/spelling-app#draggable)
   2. [Rainbow Letters](https://github.com/MissLiner/spelling-app#rainbow-letters)
