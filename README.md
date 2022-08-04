@@ -19,7 +19,8 @@ attached to the tile.
       let openState = [...open];
       openState[e.target.dataset.value] = false;
       setOpen(openState);
-    }```
+    }
+```
 
 ## Alphabet Features
 
@@ -29,22 +30,28 @@ I added draggable functionality to each letter, which I had to learn for this pr
 
 - In component/element you want to drag:
   1. In drag element - create a handleDrag() function, which stores the data from your drag element when you start dragging (I added 'data-value={alpha} to each letter and referred to that):
-    -```const handleDrag = (e) => {
-          e.dataTransfer.setData("text/plain", e.target.dataset.value);
-        }```
+``` const handleDrag = (e) => {
+      e.dataTransfer.setData("text/plain", e.target.dataset.value);
+    }
+```
   2. In drag element - Add the following properties to your drag element:
-    -```draggable="true"
-        onDragStart={handleDrag}```
+```draggable="true"
+        onDragStart={handleDrag}
+```
   3. In drag-to element - (in this case the empty letter tiles on my WordCard), add a handleDragOver() function to prevent default behavior:
-    -```const handleDragOver = (e) => {
-          e.preventDefault();
-        }```
+``` const handleDragOver = (e) => {
+      e.preventDefault();
+    }
+```
   4. In drag-to element - create a handleDrop() function (I used a ternary operator in the property itself that changed state).
+
   5. In drag-to element - add the following properties:
-    -```onDragOver={handleDragOver}
-        onDrop={handleDrop}```
-        *As mentioned, I used a ternary here, so my onDrop looks like this:*
-        -```onDrop={open[i] ? closeTile : undefined}```
+```onDragOver={handleDragOver}
+    onDrop={handleDrop}
+```
+    *As mentioned, I used a ternary here, so my onDrop looks like this:*
+```onDrop={open[i] ? closeTile : undefined}
+```
 
 ### Rainbow Letters
 
